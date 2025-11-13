@@ -62,3 +62,6 @@ Some notes on the inference in PyTorch:
     - This must be formatted as a 2D tensor ([[7.0]]), as the model expects this specific structure, not a simple number.
 - Your trained model is called with this new tensor to generate a predicted_time.
 - After getting the prediction (which is also a tensor), the code extracts the actual numerical value from it using .item().
+
+![](https://github.com/DanialArab/images/blob/main/PyTorch-for-Deep-Learning/activation_functions.png)
+

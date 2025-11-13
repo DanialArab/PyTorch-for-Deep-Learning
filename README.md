@@ -1,8 +1,12 @@
 # PyTorch for Deep Learning
 
+## Course 1: PyTorch: Fundamentals
+
+## Course 2: PyTorch: Techniques and Ecosystem Tools
+
+## Course 3: PyTorch: Advanced Architectures and Deployment
+
 ## PyTorch: Fundamentals
 
-## PyTorch: Techniques and Ecosystem Tools
-
-## PyTorch: Advanced Architectures and Deployment
+![](https://github.com/DanialArab/images/blob/main/PyTorch-for-Deep-Learning/single_neuron.png)
 

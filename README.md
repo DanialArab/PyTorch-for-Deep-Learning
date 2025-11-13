@@ -65,3 +65,9 @@ Some notes on the inference in PyTorch:
 
 ![](https://github.com/DanialArab/images/blob/main/PyTorch-for-Deep-Learning/activation_functions.png)
 
+#### Tensors: The Core of PyTorch
+
+You've seen that the journey of building a neural network begins with data. Before you can design a model or start the training process, you must gather your information and prepare it in a format the model can understand. In PyTorch, that fundamental format is the tensor. Tensors are more than just data **containers**; they are optimized for the mathematical operations that power deep learning.
+
+Mastering tensors is a vital step. Many of the most common errors encountered when building models are related to tensor shapes, types, or dimensions. 
+

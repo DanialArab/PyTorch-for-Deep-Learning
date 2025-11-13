@@ -77,5 +77,6 @@ Changing a Tensor's Dimensions: Once you identify a shape mismatch, you need to 
 
 - Adding Dimension: torch.Tensor.unsqueeze() inserts a new dimension at the specified index.
     - Notice how the shape will change from [2, 3] to [1, 2, 3] and the tensor gets wrapped in an extra pair of square brackets [].
- 
+- Removing Dimension: torch.Tensor.squeeze() removes dimensions of size 1.
+    - This reverses the unsqueeze operation, removing the 1 from the shape and taking away a pair of outer square brackets.
     - 

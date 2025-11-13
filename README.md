@@ -71,3 +71,11 @@ You've seen that the journey of building a neural network begins with data. Befo
 
 Mastering tensors is a vital step. Many of the most common errors encountered when building models are related to tensor shapes, types, or dimensions. 
 
+A very common source of errors in PyTorch projects is a mismatch between the shape of your input data and the shape your model expects. For instance, a model is typically designed to process a batch of data, so even if you want to make a single prediction, you must shape your input tensor to look like a batch of one. Mastering tensor reshaping is a key step toward building and debugging models effectively.
+
+Changing a Tensor's Dimensions: Once you identify a shape mismatch, you need to correct it. A frequent task is adding a dimension to a single data sample to create a batch of size one for your model, or removing a dimension after a batch operation is complete.
+
+- Adding Dimension: torch.Tensor.unsqueeze() inserts a new dimension at the specified index.
+    - Notice how the shape will change from [2, 3] to [1, 2, 3] and the tensor gets wrapped in an extra pair of square brackets [].
+ 
+    - 

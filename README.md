@@ -36,3 +36,29 @@ Some notes on the training in PyTorch:
 - loss.backward(): The "backward pass" (backpropagation) is performed, which calculates exactly how to adjust the weight and bias to reduce the error.
 - optimizer.step(): Updates the model's parameters using those calculated adjustments.
 - The loss is printed every 50 epochs to allow you to track the model's learning progress as the error decreases.
+
+Some notes on the inference in PyTorch:
+
+        # Use the torch.no_grad() context manager for efficient predictions
+        with torch.no_grad():
+            # Convert the Python variable into a 2D PyTorch tensor that the model expects
+            new_distance = torch.tensor([[distance_to_predict]], dtype=torch.float32)
+            
+            # Pass the new data to the trained model to get a prediction
+            predicted_time = model(new_distance)
+            
+            # Use .item() to extract the scalar value from the tensor for printing
+            print(f"Prediction for a {distance_to_predict}-mile delivery: {predicted_time.item():.1f} minutes")
+        
+            # Use the scalar value in a conditional statement to make the final decision
+            if predicted_time.item() > 30:
+                print("\nDecision: Do NOT take the job. You will likely be late.")
+            else:
+                print("\nDecision: Take the job. You can make it!")
+
+- The entire prediction process is wrapped in a with torch.no_grad() block.
+    - This tells PyTorch you're not training anymore, just making a prediction. This makes the process faster and more efficient.
+- A new input tensor is created using the distance_to_predict variable.
+    - This must be formatted as a 2D tensor ([[7.0]]), as the model expects this specific structure, not a simple number.
+- Your trained model is called with this new tensor to generate a predicted_time.
+- After getting the prediction (which is also a tensor), the code extracts the actual numerical value from it using .item().
